@@ -6,10 +6,7 @@
 
 <?php
 $conn = mysqli_connect(
-	'localhost',		//  The host to connect to
-	'cuetac_msadmission',		//  The user to connect as
-	'Iict518#@!',		//  The password to use
-	'cuetac_msadmission');	//  The default database to query
+);	//  The default database to query
 	"<h1 style='color:white'>Please Check E-mail</h1>";
 
 			 $address 	= htmlentities ( trim ( $_POST['email'] ) , ENT_NOQUOTES ); 
@@ -35,7 +32,7 @@ $conn = mysqli_connect(
 
 if($body==''){ 
     
-    $sql= "UPDATE student SET `password`='cuet1234' WHERE `email`='$address'"; 
+    $sql= "UPDATE studentsss SET `password`='cuet1234' WHERE `email`='$address'"; 
     
     $result=mysqli_query($conn,$sql);
     
