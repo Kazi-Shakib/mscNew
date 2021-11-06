@@ -4,10 +4,10 @@ if(isset($_POST['okk'])){
 	
 
  // Connect to MySql
-	$servername = "localhost";
-$username = "cuetac_msadmission";
-$password = "Iict518#@!";
-$dbname = "cuetac_msadmission";
+	$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
 $db = new mysqli($servername, $username, $password,$dbname);
    if ($db->connect_error) {
@@ -100,12 +100,7 @@ $sql="SELECT * FROM `student` WHERE `email`='$email'";
       
   }
   //chk($email);
-      $sql = "UPDATE student SET type_msc_phd='$type_msc_phd',student_type='$student_type',student_mode='$student_mode',student_name='$student_name', f_name='$f_name',m_name='$m_name',dep='$dep',b_day='$b_day',nation='$nationality',religion='$religion',present_address='$present_address',password='$password',phone='$phone',email='$email',nid='$nid',degree_name='$degree_name',institute='$institute',passed_dept='$passing_dept',cgpa='$cgpa',passing_year='$passing_year',occupation='$occupation',research='$research',reference='$reference',ref1='$ref1',ref2='$ref2',supervisor_recommendation='$supervisor_email',pic_upload='$photo',signature_upload='$signature',certificate_upload='$zip',NOC='$NOC',paper_proposal='$paper_proposal',character_certificate='$character_certificate',transaction_id='',status='' WHERE `email`='$email'";
-   // $sql = "INSERT INTO student (type_msc_phd,student_type,student_mode,student_name, f_name,m_name,dep,b_day,nation,religion,present_address,password,phone,email,nid,degree_name,institute,passed_dept,cgpa,passing_year,occupation,research,reference,pic_upload,signature_upload,certificate_upload,NOC,paper_proposal,character_certificate,supervisor_recommendation,transaction_id,status)
-//VALUES ('$type_msc_phd','$student_type','$student_mode','$student_name', '$f_name','$m_name','$dep','$b_day','$nationality','$religion','$present_address','$password','$phone','$email','$nid','$degree_name','$institute','$passing_dept','$cgpa','$passing_year','$occupation','$research','$reference','$photo','$signature','$zip','$NOC','$paper_proposal','$character_certificate','$supervisor_recommendation','','')";
- //echo $sql = "INSERT INTO student (type_msc_phd, student_name, f_name,m_name,b_day,gender,nation,religion,present_address,permanent_address,phone,email,degree_name,institute,passing_dept,cgpa,passing_year,occupation,pic_upload,signature_upload,,certificate_upload,bank_slip)
-//VALUES ('$type_msc_phd', '$student_name', '$f_name','$m_name','$b_day','$gender','$nationality','$religion','$present_address',' $permanent_address','$phone','$email','$degree_name','$institute','$passing_dept','$cgpa','$passing_year','$occupation','$photo','$signature','$zip','$bank_slip')";
-
+    
 $row= mysqli_query($db, $sql);
 if($row){
     
@@ -133,7 +128,7 @@ else{
             $photoNewName='1304106_'.uniqid('',true).".".$photoActualExt;
             $photoDestination='pic/'.$photoNewName;
             move_uploaded_file($photoTmpName,$photoDestination);
-          $sql1 = "UPDATE student SET `pic_upload`='$photoNewName' WHERE `email`='$email'";
+          $sql1 = "UPDATE studentsss SET `pic_upload`='$photoNewName' WHERE `email`='$email'";
             mysqli_query($db, $sql1);
          }
          else{
