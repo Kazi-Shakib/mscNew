@@ -3,10 +3,10 @@
 session_start();
  // Connect to MySql
 	$conn = mysqli_connect(
-	'localhost',		//  The host to connect to
-	'cuetac_msadmission',		//  The user to connect as
-	'Iict518#@!',		//  The password to use
-	'cuetac_msadmission');	//  The default database to query
+	'',		//  The host to connect to
+	'',		//  The user to connect as
+	'',		//  The password to use
+	'');	//  The default database to query
 
 
 	if(isset($_POST['loginuser']))
@@ -19,7 +19,7 @@ session_start();
  $password = mysqli_real_escape_string($conn, $password);
 		
 		if($email !='' && $password !=''){	
-		 	$sql_user_exist = "SELECT * FROM student WHERE `email`='$email' AND `password`='$password'";
+		 	$sql_user_exist = "SELECT * FROM studentssss WHERE `email`='$email' AND `password`='$password'";
 		
 	     	$user_exist=mysqli_query($conn,$sql_user_exist);
 		$count_user_exist = mysqli_num_rows($user_exist); 
