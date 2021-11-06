@@ -65,10 +65,7 @@ session_start();
   $password= $_SESSION['password'];
  // Connect to MySql
 	$conn = mysqli_connect(
-	'localhost',		//  The host to connect to
-	'cuetac_msadmission',		//  The user to connect as
-	'Iict518#@!',		//  The password to use
-	'cuetac_msadmission');	//  The default database to query
+	);	//  The default database to query
 
 
 		
