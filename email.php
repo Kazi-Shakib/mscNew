@@ -1,10 +1,10 @@
 <?php
 
 /*$conn = mysqli_connect(
-	'localhost',		//  The host to connect to
-	'cuetac_msadmission',		//  The user to connect as
-	'Iict518#@!',		//  The password to use
-	'cuetac_msadmission');	//  The default database to query
+	'',		//  The host to connect to
+	'',		//  The user to connect as
+	'',		//  The password to use
+	'');	//  The default database to query
 		"<h1 style='color:white'>Please Check E-mail</h1>";
 			$email 	= htmlentities ( trim ( $_POST['email'] ) , ENT_NOQUOTES ); 
 			if($email !=''){	
