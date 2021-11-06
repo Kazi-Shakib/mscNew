@@ -1,10 +1,7 @@
 <?php
 $email="samincuet06@gmail.com";
 $supervisor_email="saiful05eee@cuet.ac.bd";
-$servername = "localhost";
-$username = "cuetac_msadmission";
-$password = "Iict518#@!";
-$dbname = "cuetac_msadmission";
+
 
 $db = new mysqli($servername, $username, $password,$dbname);
    if ($db->connect_error) {
