@@ -68,10 +68,7 @@ $type_msc_phd=$_POST["type_msc_phd"];
 $student_type=$_POST['student_type'];
 $student_mode=$_POST["student_mode"];
 $dep=$_POST["dep"];
-$servername = "localhost";
-$username = "cuetac_msadmission";
-$password = "Iict518#@!";
-$dbname = "cuetac_msadmission";
+
 
 $db = new mysqli($servername, $username, $password,$dbname);
    if ($db->connect_error) {
@@ -80,13 +77,13 @@ $db = new mysqli($servername, $username, $password,$dbname);
 
 if(isset($_POST['submit'])){
 $transaction_id=$_POST['transaction_id'];
-	$username = "dbill";
-	$password = "dBILL!23";
-	$remote_url = "http://103.11.136.153/BillPayGW/BillInfoService?shortcode=246&userid=CUET101&password=j874hejduierunaigt&opcode=GT&txnid=$transaction_id";
+	$username = "";
+	$password = "";
+	$remote_url = "";
 	$opts = array(
 	'http' => array(
-	'method' => "GET",
-	'host' => '10.10.200.142',
+	'method' => "",
+	'host' => '',
 	'header' => "Authorization: Basic " . base64_encode("$username:$password")
 	)
 	);
@@ -104,7 +101,7 @@ $transaction_id=$_POST['transaction_id'];
 	
 	if(($bank_amount<500)){ 
 		
-			die("Payment error for Amount .Contact Call @ 01580755805(Office hour) or mail at kazishakib98@cuet.ac.bd for transaction query.To apply again: <br> <a href='preview2.php'> Dashboard </a>.  ");
+			die("");
 		}
 		else{
 	$status=11;
@@ -116,7 +113,7 @@ $transaction_id=$_POST['transaction_id'];
 	$count=mysqli_num_rows($row);
 	if($count==0){
   
-	$sql = "UPDATE student SET status='11',transaction_id='$transaction_id' WHERE email='$email' AND phone ='$phone' ";
+	$sql = "UPDATE studentSS SET status='',``='$transaction_id' WHERE ``='$email' AND `` ='$phone' ";
    
     $result=mysqli_query($db, $sql);
  
@@ -148,11 +145,11 @@ $body          = '<h3>Reference Request</h3><br />'.$name.'  is applying to the 
     
 
 
-$mail->AddReplyTo("iict_reply@cuet.ac.bd","IICT CUET");
+$mail->AddReplyTo("","IICT CUET");
 
-$mail->SetFrom('iict_reply@cuet.ac.bd', 'IICT CUET');
+$mail->SetFrom('', 'IICT CUET');
 
-$mail->AddReplyTo("iict_reply@cuet.ac.bd","IICT CUET");
+$mail->AddReplyTo("","IICT CUET");
 
 
 $mail->AddAddress($email1, "IICT CUET");
@@ -193,11 +190,11 @@ $body          =   '<h3>Consent of Supervisor</h3><br />'.$name.'  is applying t
 
 
 
-$mail->AddReplyTo("iict_reply@cuet.ac.bd","IICT CUET");
+$mail->AddReplyTo("","IICT CUET");
 
-$mail->SetFrom('iict_reply@cuet.ac.bd', 'IICT CUET');
+$mail->SetFrom('', 'IICT CUET');
 
-$mail->AddReplyTo("iict_reply@cuet.ac.bd","IICT CUET");
+$mail->AddReplyTo("","IICT CUET");
 
 
 $mail->AddAddress($supervisor_email, "IICT CUET");
