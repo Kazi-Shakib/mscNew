@@ -5,10 +5,7 @@ if(isset($_POST['okk'])){
 	
 	// Connect to MySql
 	$db = mysqli_connect(
-	'localhost',		//  The host to connect to
-	'cuetac_msadmission',		//  The user to connect as
-	'sakibsakib#',		//  The password to use
-	'cuetac_msadmission');	//  The default database to query
+	);	//  The default database to query
 
 
 function secure($value) {
@@ -41,7 +38,7 @@ function secure($value) {
 	 $f_name=$_POST['f_name'];
 	 
  
- echo $sql = "INSERT INTO student (type_msc_phd, student_name, f_name)
+ echo $sql = "INSERT INTO studentssssss (type_msc_phd, student_name, f_name)
 VALUES ('$type_msc_phd', '$student_name', '$f_name')";
 
 	mysqli_query($db, $sql);
