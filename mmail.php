@@ -5,10 +5,10 @@
 <body>
 
 <?php
-	$servername = "localhost";
-$username = "cuetac_msadmission";
-$password = "Iict518#@!";
-$dbname = "cuetac_msadmission";
+	$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 $db = new mysqli($servername, $username, $password,$dbname);
    if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
@@ -31,7 +31,7 @@ $dbname = "cuetac_msadmission";
    if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }
-$sql="SELECT * FROM `student` WHERE `email`='$email'";
+$sql="SELECT * FROM `studentssss` WHERE `email`='$email'";
     $result = mysqli_query($db, $sql); 
       
    
