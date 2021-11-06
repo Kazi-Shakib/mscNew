@@ -1,1 +1,2 @@
 # mscNew
+This snippet of code is the post-graduate admission process and it also includes login,register,emailing the details to the applicant, when logged in showing dashboard, data taken from the applicants(about personal info,academic,publications), then emailing the referees to upload letter of recommendation, for Ph.D. students to receive consent from supervisor and at last generating applicant's copy and faculty profile to see the applicants. Faculty can also send reminder to the referees here. 
