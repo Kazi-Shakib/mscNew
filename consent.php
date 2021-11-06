@@ -2,16 +2,16 @@
 $consent=$_GET["consent"];
 $email=$_GET["email"];
 
-$servername = "localhost";
-$username = "cuetac_msadmission";
-$password = "Iict518#@!";
-$dbname = "cuetac_msadmission";
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
 $db = new mysqli($servername, $username, $password,$dbname);
    if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }
-$sql = "UPDATE student SET supervisor_recommendation='$consent' WHERE `email`='$email'";
+$sql = "UPDATE studentssssss SET supervisor_recommendation='$consent' WHERE `email`='$email'";
 $row= mysqli_query($db, $sql);
 if($row){
     
