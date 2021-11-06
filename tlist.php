@@ -72,18 +72,11 @@ if(!isset($_SESSION['tt'])){
 
   </tr>
 <?php  $sl=1;
- 
- // Connect to MySql
-	$conn = mysqli_connect(
-	'localhost',		//  The host to connect to
-	'cuetac_msadmission',		//  The user to connect as
-	'Iict518#@!',		//  The password to use
-	'cuetac_msadmission');	//  The default database to query
 
 
 		$dep=$_SESSION['tt'];
     
-    $sql_user_exist = "SELECT * FROM student WHERE `dep`='$dep' && status='11'";
+    $sql_user_exist = "SELECT * FROM studentSSSS WHERE `dep`='$dep' && status='11'";
 		
 		$result=mysqli_query($conn,$sql_user_exist);
 	 
