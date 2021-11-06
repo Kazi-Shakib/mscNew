@@ -4,10 +4,10 @@ if(isset($_POST['submit'])){
 $email=$_POST['email'];
 
  // Connect to MySql
-	$servername = "localhost";
-$username = "cuetac_msadmission";
-$password = "Iict518#@!";
-$dbname = "cuetac_msadmission";
+	$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
 $db = new mysqli($servername, $username, $password,$dbname);
    if ($db->connect_error) {
@@ -67,7 +67,7 @@ $ref1ActualExt=strtolower(end($ref1Ext));
             
             $ref1Destination='pic/'.$ref1NewName;
             move_uploaded_file($ref1TmpName,$ref1Destination);
-            $sql5 = "UPDATE student SET `ref1`= '$ref1NewName' WHERE `ref1`= '$ref_email1'";
+            $sql5 = "UPDATE studentsss SET `ref1`= '$ref1NewName' WHERE `ref1`= '$ref_email1'";
             mysqli_query($db, $sql5);
             echo "<h3>Successfully Recorded the response! Thank you for your Time and Patience!</h3>";
          }
@@ -104,7 +104,7 @@ $ref2ActualExt=strtolower(end($ref2Ext));
             $ref2NewName='1304106_'.uniqid('',true).".".$ref2ActualExt;
             $ref2Destination='pic/'.$ref2NewName;
             move_uploaded_file($ref2TmpName,$ref2Destination);
-           $sql6 = "UPDATE student SET `ref2`= '$ref2NewName' WHERE `ref2`= '$ref_email1'";
+           $sql6 = "UPDATE studentssss SET `ref2`= '$ref2NewName' WHERE `ref2`= '$ref_email1'";
             mysqli_query($db, $sql6);
             echo "<h3>Successfully Recorded the response! Thank you for your Time and Patience!</h3>";
          }
