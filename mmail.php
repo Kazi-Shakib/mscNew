@@ -21,10 +21,7 @@ $db = new mysqli($servername, $username, $password,$dbname);
 	$password 	= htmlentities ( trim ( $_POST['password'] ) , ENT_NOQUOTES ); 
      
   function chk($email){
-      	$servername = "localhost";
-$username = "cuetac_msadmission";
-$password = "Iict518#@!";
-$dbname = "cuetac_msadmission";
+      
 
 
  $db = new mysqli($servername, $username, $password,$dbname);
